@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>digonal nav</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+
+html, body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+   font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1.7;
+  perspective-origin: 0% 50%;
+  perspective: 800px;
+  background: #21212d;
+
+}
+nav, main {
+  transition: transform 150ms ease-out;
+}
+nav {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16em;
+  background-color: #353441;
+  transform: translateX(-16em);
+}
+nav.menu-active {
+  transform: translateX(0);
+}
+nav.menu-hover {
+  transform: translateX(-15em);
+}
+nav h1 {
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -65px;
+  height: 60px;
+  width: 65px;
+  line-height: 60px;
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #353441;
+  cursor: pointer;
+}
+nav h1:hover {
+  color: #353441;
+  background: #fff;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  padding: 0 1em;
+  width: 100%;
+  height: 60px;
+  color: #9dc6d1;
+  line-height: 60px;
+  background-color: #353441;
+    transition: all 0.5s ease-in;
+}
+nav li:nth-of-type(2n) {
+  background-color: #3a3947;
+}
+nav li:hover {
+  background: ORANGERED;
+    color: white;
+
+}
+main {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(https://images.pexels.com/photos/3601422/pexels-photo-3601422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  transform-origin: 0% 50%;
+    background-size: cover;
+    background-position: center bottom;
+}
+main:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, transparent, rgba(33, 33, 45, .5));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 150ms ease-out, visibility 0s 150ms;
+}
+main.menu-active {
+  border-radius: 0.001px;
+  transform: translateX(16em) rotateY(15deg);
+}
+main.menu-active:after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 150ms ease-out, visibility 0s;
+}
+main.menu-hover {
+  border-radius: 0.001px;
+  transform: translateX(1em) rotateY(1deg);
+}
+main section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 1em 4em;
+  max-width: 680px;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, .5);
+}
+section h1 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+section p {
+  display: inline-block;
+  margin: 16px 0;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="menu-activea">
+  <h1>QO'SHIQ</h1>
+  <ul>
+    <li><a href="index.html">KEL KETAYLIK</a></li>
+    <li><a href="rybak.html">HOW LONG</a></li>
+    <li><a href="mal.html">FARYOD</a></li>
+
+  </ul>
+</nav>
+<main>
+  <section>
+   <br><br><br>
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSomKvnhMSMjDPnAlbN3QJvK-eW3YjjekPemw&usqp=CAU" alt="" width="100px" height="100px">
+    <h1>LIONEL RICH-"HOW LONG"</h1>
+    <br>
+<h5>Every time I see you and I look into your eyes<br>
+There's a feeling that I get<br>
+And it's way down deep inside, girl<br>
+I've been trying to hold on, but you say that you're not sure<br>
+I just hope you realize what my heart is going through<br>
+<br>
+How long, must this feeling go on<br>
+How long, must I stand the pain and<br>
+How long, must this feeling go on<br>
+Waiting for the night<br>
+Waiting for the right time to come<br>
+<br>
+I know all about the hurt and the problems in the past<br>
+I know why your scared of love,<br>
+'Cause you think it just wont last long<br>
+Well, I'm here to tell you what I'm saying is all true<br>
+There ain't nobody else in life<br>
+That can take the place of you<br>
+<br>
+How long, must this feeling go on<br>
+How long, must I stand the pain and<br>
+How long, must this feeling go on<br>
+waiting for the night<br>
+Waiting…<br></h5>
+
+
+<br>
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="music/mal.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+  </section>
+</main>
+<script>
+    (function() {
+
+  var nav = $('nav'),
+    menu = $('nav h1'),
+    main = $('main'),
+  	open = false,
+  	hover = false;
+
+  menu.on('click', function() {
+		open = !open ? true : false;
+    nav.toggleClass('menu-active');
+    main.toggleClass('menu-active');
+    nav.removeClass('menu-hover');
+    main.removeClass('menu-hover');
+    console.log(open);
+  });
+  menu.hover(
+    function() {
+      if (!open) {
+      	nav.addClass('menu-hover');
+      	main.addClass('menu-hover');
+      }
+    }, function() {
+      nav.removeClass('menu-hover');
+      main.removeClass('menu-hover');
+    }
+  );
+
+})();
+
+</script>
+</body>
+</html>
